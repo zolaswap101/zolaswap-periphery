@@ -12,5 +12,5 @@
     "ZOLAStakingFactory": "0xe53e4e6BA68764533C4020b3dd61df06410a4Aa2",
     "ZolaFactory": "0x6C33d8E36321f6Deb4A825a8870A0Ebdc9d7cA62",
     "PancakeFactory_Init_Code_Hash": "0xa0db76065dc98416f16b3a73cf67995ea33372d9ac95e1608fd4f1adb852e5ed",
-    "ZolaRouter": {}
+    "ZolaRouter": "0x4329f5bD101f47DC0c82BE50e9a9c1c2AB4B1A1D"
 }
