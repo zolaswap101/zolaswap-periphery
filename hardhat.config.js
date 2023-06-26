@@ -1,5 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox");
-require("dotenv")
+require("dotenv").config();
 
 const fs = require('fs');
 // const infuraId = fs.readFileSync(".infuraid").toString().trim() || "";
@@ -10,13 +10,13 @@ module.exports = {
       chainId: 1337,
     },
     mainnet: {
-      accounts: ['3dbd9e25b3dd615a019a3a9159a90f3580ee4a79171d9b04ac2f94077f8d67f8'],
+      accounts: ['process.env.PRIVATE_KEY'],
       url: "https://polygon-rpc.com/",
       chainId: 137,
     },
     testnet: {
       url: "https://matic-mumbai.chainstacklabs.com",
-      accounts: ['3dbd9e25b3dd615a019a3a9159a90f3580ee4a79171d9b04ac2f94077f8d67f8']
+      accounts: ['process.env.PRIVATE_KEY'],
     }
   },
   solidity: {
@@ -35,7 +35,21 @@ module.exports = {
   },
   mocha: {
     timeout: 40000
-  }
+  },
+  abiExporter: [
+    {
+      path: './abi/json',
+      format: "json",
+    },
+    {
+      path: './abi/minimal',
+      format: "minimal",
+    },
+    {
+      path: './abi/fullName',
+      format: "fullName",
+    },
+  ]
   
 };
 
